@@ -1,0 +1,31 @@
+{
+  "name": "Server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "npm": "^6.12.0",
+    "node": "^10.16.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "nyc": {
+    "exclude": [
+      "configuration/index.js",
+      "passport.js",
+      "models/**/*.js",
+      "helpers/**/*.js",
+      "__tests__",
+      "node_modules"
+    ],
+    "cache": false,
+    "report-dir": "./__tests__/report"
+  }
+}
